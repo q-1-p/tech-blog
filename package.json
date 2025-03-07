@@ -9,6 +9,7 @@
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",
     "biome": "^0.3.3",
+    "firebase": "^11.4.0",
     "jest": "^29.7.0",
     "next": "latest",
     "react": "^18.2.0",
