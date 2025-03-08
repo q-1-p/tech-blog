@@ -1,8 +1,27 @@
-export default function Page() {
+import { ArticleList } from "./components/domain/article-list";
+
+interface Article {
+	id: string;
+	title: string;
+	created_at: string;
+	url: string;
+	body: string;
+}
+
+export default async function Page() {
 	return (
-		<>
-			<h1 className="text-3xl font-bold underline">Hello, Next.js!</h1>
-			<button type="button" className="btn btn-primary">Button</button>
-		</>
+		<div className="container mx-auto px-4 py-8">
+			<div className="pb-6 flex justify-between items-center">
+				<h2 className="text-2xl font-bold">技術記事一覧</h2>
+				<a
+					href="/article"
+					className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+				>
+					すべての記事を表示
+				</a>
+			</div>
+
+			<ArticleList maximumNumberOfPages={4} />
+		</div>
 	);
 }
