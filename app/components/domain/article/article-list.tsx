@@ -1,9 +1,11 @@
-import type { Article } from "../../../domain/article";
+import type { Article } from "../../../../domain/article";
 import { ArticleCard } from "./article-card";
 
-export const ArticleList = async (props: { maximumNumberOfPages: number }) => {
+export const ArticleList = async ({
+	maximumNumberOfPages,
+}: { maximumNumberOfPages: number }) => {
 	const res = await fetch(
-		`${process.env.NEXT_PUBLIC_MINE_URL}/api/qiita?per_page=${props.maximumNumberOfPages}`,
+		`${process.env.NEXT_PUBLIC_MINE_URL}/api/qiita?per_page=${maximumNumberOfPages}`,
 		{
 			cache: "no-store",
 		},

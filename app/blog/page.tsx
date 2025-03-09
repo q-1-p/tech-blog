@@ -1,4 +1,4 @@
-import { ArticleList } from "../components/domain/article/article-list";
+import { BlogList } from "../components/domain/blog/blog-list";
 
 export default async function Page() {
 	return (
@@ -7,7 +7,7 @@ export default async function Page() {
 				<h2 className="text-2xl font-bold">技術記事一覧</h2>
 			</div>
 
-			<ArticleList maximumNumberOfPages={100} />
+			<BlogList maximumNumberOfPages={100} />
 		</div>
 	);
 }
