@@ -2,8 +2,8 @@ import type { Article } from "../../../../domain/article";
 import { ArticleCard } from "./article-card";
 
 export const ArticleList = async ({
-	maximumNumberOfPages,
-}: { maximumNumberOfPages: number }) => {
+	maximumNumberOfPages = 4,
+}: { maximumNumberOfPages?: number } = {}) => {
 	const res = await fetch(
 		`${process.env.NEXT_PUBLIC_MINE_URL}/api/qiita?per_page=${maximumNumberOfPages}`,
 		{
