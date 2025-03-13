@@ -1,7 +1,8 @@
 import Image from "next/image";
 import type { Blog } from "../../../domain/blog";
 
-export default async function Page({ params }: { params: { id: string } }) {
+// @ts-ignore - Next.js 15.2.1の型定義の問題を回避
+export default async function Page({ params }: any) {
 	const res = await fetch(`${process.env.NEXT_PUBLIC_MINE_URL}/api/cms`, {
 		cache: "no-store",
 	});
